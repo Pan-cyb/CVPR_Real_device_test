@@ -1,0 +1,43 @@
+# Local vendor bundle and inspection copies; obtain separately on Ubuntu.
+/sa100/
+/.work/
+
+# Credentials and per-machine settings.
+.env
+.env.*
+!.env.example
+wifi_secrets.h
+*.pem
+*.key
+*.p12
+*.pfx
+*credentials*.json
+config/local.*
+config/site.*
+
+# Generated firmware, Python environments, IDE and OS files.
+**/.pio/
+**/__pycache__/
+*.py[cod]
+*.egg-info/
+.venv*/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Real experiments and model outputs must not enter this public repository.
+/data/
+/runs/
+/exports/
+/recordings/
+/real_device/artifacts/*
+!/real_device/artifacts/*_log.txt
+!/real_device/artifacts/demo_free_fall/
+!/real_device/artifacts/demo_free_fall/**
+!/real_device/artifacts/demo_assisted_balance/
+!/real_device/artifacts/demo_assisted_balance/**

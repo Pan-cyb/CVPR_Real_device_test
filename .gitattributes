@@ -1,0 +1,13 @@
+* text=auto
+*.md text eol=lf
+*.py text eol=lf
+*.cpp text eol=lf
+*.h text eol=lf
+*.ini text eol=lf
+*.toml text eol=lf
+*.sh text eol=lf
+*.bash text eol=lf
+*.mp4 binary
+*.png binary
+*.jpg binary
+*.gz binary

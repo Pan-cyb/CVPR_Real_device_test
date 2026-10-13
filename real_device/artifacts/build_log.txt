@@ -1,0 +1,20 @@
+📦 环境: esp32-s3-n16r8 [esp32-s3-n16r8] (espressif32@6.5.0)
+🔨 构建命令: C:\Users\0\.platformio\penv\Scripts\pio.EXE run -d G:\PROJECT\CVPR_Real_device_test\real_device\firmware -e esp32-s3-n16r8
+✅ 构建成功（耗时 13.7 秒）
+
+📊 构建结果: ✅ 构建成功，找到 4 个产物
+
+  构建命令:   C:\Users\0\.platformio\penv\Scripts\pio.EXE run -d G:\PROJECT\CVPR_Real_device_test\real_device\firmware -e esp32-s3-n16r8
+  工程目录:   G:\PROJECT\CVPR_Real_device_test\real_device\firmware
+  环境:       esp32-s3-n16r8
+  板卡:       esp32-s3-n16r8
+  平台:       espressif32@6.5.0
+
+📦 找到 4 个固件产物：
+  1. [ELF] G:\PROJECT\CVPR_Real_device_test\real_device\firmware\.pio\build\esp32-s3-n16r8\firmware.elf (6734.2 KB) ⭐ 首选
+  2. [BIN] G:\PROJECT\CVPR_Real_device_test\real_device\firmware\.pio\build\esp32-s3-n16r8\firmware.bin (262.0 KB)
+  3. [BIN] G:\PROJECT\CVPR_Real_device_test\real_device\firmware\.pio\build\esp32-s3-n16r8\bootloader.bin (14.8 KB)
+  4. [BIN] G:\PROJECT\CVPR_Real_device_test\real_device\firmware\.pio\build\esp32-s3-n16r8\partitions.bin (3.0 KB)
+
+📝 证据:
+  耗时: 13.7 秒

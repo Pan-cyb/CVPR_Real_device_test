@@ -1,0 +1,40 @@
+# Optional third-party references kept local-only.
+Models/
+benchmark/r2dreamer/
+
+# Legacy RM65-B Reacher/pendulum pre-study artifacts stay local for possible
+# future exploration; the tracked environment and README record are retained.
+data/rm65b_pendulum*/
+runs/rm65b_pendulum*/
+runs/eval/rm65b_pendulum*/
+
+# Generated datasets, checkpoints, and experiment logs.
+data/
+runs/
+*.pt
+*.pth
+*.ckpt
+
+# Python and test caches.
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Local editor and operating-system files.
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.agents/
+.codex/
+
+# Personal experiment notes kept outside the public repository.
+TRAINING_LOSS_GUIDE.txt
+
+# Local editable architecture artwork and render previews.
+docs/figures/jointgv_architecture_inkscape.svg
+docs/figures/jointgv_architecture_inkscape_preview*.png
+docs/figures/.jointgv_architecture_preview.html
+.tmp_chrome_jointgv*/
+.tmp_edge_jointgv*/
+.tmp_*_smoke/

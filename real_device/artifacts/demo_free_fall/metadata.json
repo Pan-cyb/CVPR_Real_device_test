@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "session_id": "93ec4a44-c489-4a08-9e15-a694bb27f02a",
+  "source": "synthetic",
+  "category": "free_fall",
+  "category_meaning": "unassisted after release key",
+  "release_semantics": "keyboard event only; synthetic demo has no human-release detector",
+  "valid_trial": true,
+  "stop_reason": "angle_limit",
+  "start_pc_ns": 10000000000,
+  "stop_pc_ns": 12810000000,
+  "duration_s": 2.81,
+  "sensor_frequency": {
+    "count": 563,
+    "mean_hz": 200.0,
+    "median_hz": 200.0
+  },
+  "camera_frequency": {
+    "count": 85,
+    "mean_hz": 30.0000003,
+    "median_hz": 30.000000300000004
+  },
+  "camera": {
+    "adapter": "synthetic",
+    "timestamp_kind": "synthetic_exposure_time",
+    "latency_offset_ns": 0
+  },
+  "clock": {
+    "kind": "synthetic_exact"
+  },
+  "geometry": {
+    "sensor_housing_fixed": true,
+    "single_plane": true,
+    "zero_calibrated": true
+  },
+  "alignment": {
+    "frames": 85,
+    "aligned_valid": 85,
+    "aligned_invalid": 0,
+    "max_gap_ms": 20
+  }
+}

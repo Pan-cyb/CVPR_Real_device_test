@@ -1,0 +1,5 @@
+camera_stable,clock_valid,event,geometry_confirmed,initial_angle_deg,reason,sensor_stable,t_pc_ns,valid_trial,visual_release_verified,zero_calibrated
+True,True,readiness,True,,,True,10000000000,,,True
+,,release_key,,,,,10000000000,,False,
+,,recording_start,,2.0,,,10000000000,,,
+,,recording_stop,,,duration,,16000000000,True,,

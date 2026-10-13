@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "session_id": "97b3ae4b-dbb7-4d86-972a-3a65e5ebec6f",
+  "source": "synthetic",
+  "category": "assisted_balance",
+  "category_meaning": "human may support after release key",
+  "release_semantics": "keyboard event only; synthetic demo has no human-release detector",
+  "valid_trial": true,
+  "stop_reason": "duration",
+  "start_pc_ns": 10000000000,
+  "stop_pc_ns": 16000000000,
+  "duration_s": 6.0,
+  "sensor_frequency": {
+    "count": 1201,
+    "mean_hz": 200.0,
+    "median_hz": 200.0
+  },
+  "camera_frequency": {
+    "count": 181,
+    "mean_hz": 30.0000003,
+    "median_hz": 30.000000300000004
+  },
+  "camera": {
+    "adapter": "synthetic",
+    "timestamp_kind": "synthetic_exposure_time",
+    "latency_offset_ns": 0
+  },
+  "clock": {
+    "kind": "synthetic_exact"
+  },
+  "geometry": {
+    "sensor_housing_fixed": true,
+    "single_plane": true,
+    "zero_calibrated": true
+  },
+  "alignment": {
+    "frames": 181,
+    "aligned_valid": 181,
+    "aligned_invalid": 0,
+    "max_gap_ms": 20
+  }
+}

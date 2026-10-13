@@ -1,0 +1,10 @@
+{
+  "vision_vs_sensor": {
+    "count": 85,
+    "mae_deg": 0.1578644065064449,
+    "rmse_deg": 0.4583201534108473,
+    "max_abs_deg": 3.385170134276848
+  },
+  "invalid_vision_frames": 0,
+  "note": "angle metrics; RGB prediction metrics require paired predicted images"
+}

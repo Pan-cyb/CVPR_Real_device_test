@@ -1,0 +1,9 @@
+{
+  "vision_vs_sensor": {
+    "count": 181,
+    "mae_deg": 0.059370164536537165,
+    "rmse_deg": 0.07114865769905748,
+    "max_abs_deg": 0.1267889710023553
+  },
+  "note": "angular metrics only; image MSE/SSIM/LPIPS require paired predicted RGB images"
+}

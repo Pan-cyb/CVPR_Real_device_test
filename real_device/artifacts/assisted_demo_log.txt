@@ -1,0 +1,3 @@
+{
+  "output": "artifacts\\demo_assisted_balance"
+}

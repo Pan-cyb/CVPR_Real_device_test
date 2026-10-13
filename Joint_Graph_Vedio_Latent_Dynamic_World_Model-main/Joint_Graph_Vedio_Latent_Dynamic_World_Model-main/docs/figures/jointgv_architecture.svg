@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="920" viewBox="0 0 1500 920">
+  <defs>
+    <style>
+      .title{font:700 30px 'Segoe UI',Arial;fill:#e2e8f0}.subtitle{font:15px 'Segoe UI',Arial;fill:#94a3b8}
+      .head{font:700 17px 'Segoe UI',Arial;fill:#f8fafc}.body{font:14px 'Segoe UI',Arial;fill:#cbd5e1}
+      .small{font:12px 'Segoe UI',Arial;fill:#94a3b8}.arrow{stroke:#94a3b8;stroke-width:3;fill:none;marker-end:url(#arrow)}
+      .dash{stroke:#64748b;stroke-width:2;stroke-dasharray:7 7;fill:none;marker-end:url(#arrow)}
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#94a3b8"/></marker>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#020617" flood-opacity=".45"/></filter>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0f172a"/><stop offset="1" stop-color="#111827"/></linearGradient>
+  </defs>
+  <rect width="1500" height="920" fill="url(#bg)"/>
+  <text x="60" y="58" class="title">Joint Graph–Video Latent Dynamics World Model</text>
+  <text x="60" y="86" class="subtitle">Explicit RGB graph perception + recursive action-conditioned graph dynamics + ΔG–ΔZ co-dynamics</text>
+
+  <!-- inputs -->
+  <g filter="url(#shadow)"><rect x="55" y="135" width="170" height="100" rx="16" fill="#1e293b" stroke="#64748b"/><text x="140" y="174" class="head" text-anchor="middle">RGB observation</text><text x="140" y="202" class="body" text-anchor="middle">oₜ, oₜ₋₁, …</text></g>
+  <g filter="url(#shadow)"><rect x="55" y="660" width="170" height="82" rx="16" fill="#1e293b" stroke="#64748b"/><text x="140" y="695" class="head" text-anchor="middle">Robot action</text><text x="140" y="721" class="body" text-anchor="middle">aₜ</text></g>
+
+  <!-- visual branch -->
+  <rect x="285" y="115" width="1160" height="230" rx="22" fill="#172554" stroke="#3b82f6" stroke-width="2"/>
+  <text x="315" y="151" class="head">Backbone-native visual world model (unchanged transition family)</text>
+  <g filter="url(#shadow)"><rect x="315" y="180" width="235" height="105" rx="14" fill="#1e3a8a"/><text x="432" y="215" class="head" text-anchor="middle">Visual encoder</text><text x="432" y="241" class="body" text-anchor="middle">VAE / Dreamer CNN / DINOv2</text><text x="432" y="263" class="small" text-anchor="middle">backbone-native latent</text></g>
+  <g filter="url(#shadow)"><rect x="625" y="180" width="250" height="105" rx="14" fill="#1e3a8a"/><text x="750" y="215" class="head" text-anchor="middle">Latent transition</text><text x="750" y="241" class="body" text-anchor="middle">MDN-LSTM / RSSM / DINO-WM</text><text x="750" y="263" class="small" text-anchor="middle">base visual change ΔZₜ</text></g>
+  <g filter="url(#shadow)"><rect x="1190" y="180" width="220" height="105" rx="14" fill="#1e3a8a"/><text x="1300" y="215" class="head" text-anchor="middle">Conditioned prior</text><text x="1300" y="241" class="body" text-anchor="middle">Ẑₜ₊₁ / ĥₜ₊₁</text><text x="1300" y="263" class="small" text-anchor="middle">recursive imagination</text></g>
+
+  <!-- graph observer -->
+  <rect x="285" y="390" width="690" height="230" rx="22" fill="#052e2b" stroke="#14b8a6" stroke-width="2"/>
+  <text x="315" y="426" class="head">Pretrained Explicit Graph Observer (RGB-only inference)</text>
+  <g filter="url(#shadow)"><rect x="315" y="455" width="180" height="115" rx="14" fill="#115e59"/><text x="405" y="482" class="head" text-anchor="middle">Official RelTR</text><text x="405" y="508" class="body" text-anchor="middle">semantic queries +</text><text x="405" y="532" class="small" text-anchor="middle">dense layer3 map</text><text x="405" y="551" class="small" text-anchor="middle">frozen by default</text></g>
+  <g filter="url(#shadow)"><rect x="520" y="455" width="190" height="115" rx="14" fill="#115e59"/><text x="615" y="482" class="head" text-anchor="middle">Role grounding</text><text x="615" y="508" class="body" text-anchor="middle">dense soft-argmax</text><text x="615" y="532" class="small" text-anchor="middle">bounded residual</text><text x="615" y="551" class="small" text-anchor="middle">then gated history</text></g>
+  <g filter="url(#shadow)"><rect x="735" y="455" width="210" height="115" rx="14" fill="#115e59"/><text x="840" y="482" class="head" text-anchor="middle">Explicit relations</text><text x="840" y="508" class="body" text-anchor="middle">VTransE relation head</text><text x="840" y="532" class="small" text-anchor="middle">1-round IMP refinement</text><text x="840" y="551" class="small" text-anchor="middle">Gₜ + confidence</text></g>
+
+  <!-- graph dynamics and fusion -->
+  <g filter="url(#shadow)"><rect x="1015" y="420" width="260" height="150" rx="18" fill="#4c1d95" stroke="#a78bfa"/><text x="1145" y="456" class="head" text-anchor="middle">Graph Dynamics</text><text x="1145" y="484" class="body" text-anchor="middle">Graph Network(Gₜ, aₜ)</text><text x="1145" y="510" class="body" text-anchor="middle">ΔGₜ → Ĝₜ₊₁</text><text x="1145" y="538" class="small" text-anchor="middle">bounded recursive update</text></g>
+  <g filter="url(#shadow)"><rect x="1015" y="620" width="395" height="135" rx="18" fill="#7c2d12" stroke="#fb923c"/><text x="1212" y="655" class="head" text-anchor="middle">Graph–world co-dynamics</text><text x="1212" y="682" class="body" text-anchor="middle">tokens: Sinkhorn ΔGₜ ↔ ΔZₜ</text><text x="1212" y="708" class="body" text-anchor="middle">global RSSM: Δsₜ queries ΔGₜ nodes</text><text x="1212" y="734" class="small" text-anchor="middle">bounded/gated correction changes transition</text></g>
+
+  <!-- outputs -->
+  <g filter="url(#shadow)"><rect x="1015" y="795" width="395" height="100" rx="16" fill="#1e293b" stroke="#64748b"/><text x="1212" y="825" class="head" text-anchor="middle">Reward / Actor / Critic</text><text x="1212" y="850" class="small" text-anchor="middle">Dreamer: unchanged RSSM feature</text><text x="1212" y="872" class="small" text-anchor="middle">DINO-WM: prediction only</text></g>
+
+  <!-- teacher -->
+  <g><rect x="300" y="675" width="550" height="155" rx="18" fill="#312e81" stroke="#818cf8" stroke-dasharray="7 6"/><text x="575" y="710" class="head" text-anchor="middle">MuJoCo teacher supervision (training only)</text><text x="575" y="740" class="body" text-anchor="middle">one representative geom defines 3D + 2D coordinates</text><text x="575" y="768" class="body" text-anchor="middle">absolute grounding first, temporal identity second</text><text x="575" y="799" class="small" text-anchor="middle">never provided to the observer at inference</text></g>
+
+  <!-- arrows -->
+  <path d="M225 180H315" class="arrow"/><path d="M550 232H625" class="arrow"/><path d="M875 232H1190" class="arrow"/>
+  <path d="M140 235V512H315" class="arrow"/><path d="M495 512H520" class="arrow"/><path d="M710 512H735" class="arrow"/>
+  <path d="M945 512H1015" class="arrow"/>
+  <!-- a_t conditions both the native MDN-LSTM/RSSM and Graph Dynamics -->
+  <path d="M225 684H260V320H750V285" class="arrow"/><text x="690" y="312" class="small">aₜ</text>
+  <path d="M225 701H930V525H1015" class="arrow"/>
+  <path d="M1145 570V620" class="arrow"/><path d="M875 260V687H1015" class="arrow"/>
+  <path d="M1410 687H1450V232H1410" class="arrow"/><path d="M1300 285V805" class="arrow"/>
+  <path d="M575 675V610H630V570" class="dash"/>
+  <text x="365" y="649" class="small">supervision only</text>
+</svg>

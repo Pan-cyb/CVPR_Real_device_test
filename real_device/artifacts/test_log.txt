@@ -1,0 +1,30 @@
+test_nan_source_filtered (test_core.AngleTests.test_nan_source_filtered) ... ok
+test_wrap_interpolation_and_gap_no_extrapolation (test_core.AngleTests.test_wrap_interpolation_and_gap_no_extrapolation) ... ok
+test_capture_rejects_nonfinite_configuration (test_core.PipelineTests.test_capture_rejects_nonfinite_configuration) ... ok
+test_compressed_buffer_does_not_retain_raw_image (test_core.PipelineTests.test_compressed_buffer_does_not_retain_raw_image) ... ok
+test_demo_refuses_overwrite (test_core.PipelineTests.test_demo_refuses_overwrite) ... ok
+test_initialization_failure_closes_and_records_invalid_metadata (test_core.PipelineTests.test_initialization_failure_closes_and_records_invalid_metadata) ... ok
+test_injected_capture_trigger_and_video_csv_match (test_core.PipelineTests.test_injected_capture_trigger_and_video_csv_match) ... ok
+test_injected_restart_and_blocked_camera_are_invalid (test_core.PipelineTests.test_injected_restart_and_blocked_camera_are_invalid) ... ok
+test_no_recorded_frame_cannot_be_valid (test_core.PipelineTests.test_no_recorded_frame_cannot_be_valid) ... ok
+test_synthetic_session_video_csv_and_export (test_core.PipelineTests.test_synthetic_session_video_csv_and_export) ... ok
+test_udp_probe_handshakes_before_receiving_samples (test_core.PipelineTests.test_udp_probe_handshakes_before_receiving_samples) ... ok
+test_duplicate_reorder_gap_and_boot (test_core.ProtocolTests.test_duplicate_reorder_gap_and_boot) ... ok
+test_parser_rejects_bad_boolean_nonfinite_and_negative (test_core.ProtocolTests.test_parser_rejects_bad_boolean_nonfinite_and_negative) ... ok
+test_deadline_wins_and_late_predeadline_angle_corrects (test_core.SessionTests.test_deadline_wins_and_late_predeadline_angle_corrects) ... ok
+test_duration_and_measurement_time_angle_stop (test_core.SessionTests.test_duration_and_measurement_time_angle_stop) ... ok
+test_initial_angle_gate (test_core.SessionTests.test_initial_angle_gate) ... ok
+test_prestart_late_sample_cannot_stop (test_core.SessionTests.test_prestart_late_sample_cannot_stop) ... ok
+test_release_rejects_nonfinite_and_stale (test_core.SessionTests.test_release_rejects_nonfinite_and_stale) ... ok
+test_stale_sensor_and_stalled_video (test_core.SessionTests.test_stale_sensor_and_stalled_video) ... ok
+test_invalid_exchange_and_nonfinite_clock_rejected (test_core.SyncTests.test_invalid_exchange_and_nonfinite_clock_rejected) ... ok
+test_offset_drift_and_high_rtt_rejection (test_core.SyncTests.test_offset_drift_and_high_rtt_rejection) ... ok
+test_quality_rejects_high_rtt (test_core.SyncTests.test_quality_rejects_high_rtt) ... ok
+test_marker_angle_and_wrapped_metrics (test_core.VisionMetricTests.test_marker_angle_and_wrapped_metrics) ... ok
+test_missing_marker_is_invalid_not_zero (test_core.VisionMetricTests.test_missing_marker_is_invalid_not_zero) ... ok
+test_training_export_guard (test_core.VisionMetricTests.test_training_export_guard) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 2.908s
+
+OK

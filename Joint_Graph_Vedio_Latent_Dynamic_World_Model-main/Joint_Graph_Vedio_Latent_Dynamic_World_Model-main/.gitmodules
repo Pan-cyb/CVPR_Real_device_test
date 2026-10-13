@@ -1,0 +1,9 @@
+[submodule "benchmark/burchim-dreamerv3-pytorch"]
+	path = benchmark/burchim-dreamerv3-pytorch
+	url = https://github.com/burchim/DreamerV3-PyTorch.git
+[submodule "benchmark/reltr"]
+	path = benchmark/reltr
+	url = https://github.com/yrcong/RelTR.git
+[submodule "benchmark/dino_wm"]
+	path = benchmark/dino_wm
+	url = https://github.com/gaoyuezhou/dino_wm.git
